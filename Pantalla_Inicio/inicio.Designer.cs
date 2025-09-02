@@ -64,6 +64,7 @@
             btnEncargado.TabIndex = 2;
             btnEncargado.Text = "Encargado de inventario";
             btnEncargado.UseVisualStyleBackColor = true;
+            btnEncargado.Click += btnEncargado_Click;
             // 
             // btnVendedor
             // 
@@ -73,6 +74,7 @@
             btnVendedor.TabIndex = 3;
             btnVendedor.Text = "Vendedor";
             btnVendedor.UseVisualStyleBackColor = true;
+            btnVendedor.Click += btnVendedor_Click_1;
             // 
             // btnSalir
             // 

@@ -22,20 +22,27 @@ namespace CapaPresentacion.Pantalla_Inicio
         {
             var adminForm = new frmVistaAdmin();
             adminForm.Show();
+            this.Hide();
+            adminForm.FormClosed += (s, args) => this.Show();
 
         }
 
-        private void btnVendedor_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void btnEncargado_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnVendedor_Click_1(object sender, EventArgs e)
+        {
+            var vendedorForm = new Vendedor.frmVendedor();
+            vendedorForm.Show();
+            this.Hide();
+            vendedorForm.FormClosed += (s, args) => this.Show();
+        }
+
+        private void btnEncargado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
