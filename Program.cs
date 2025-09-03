@@ -1,4 +1,4 @@
-using CapaPresentacion.Pantalla_Inicio;
+using  inicio;
 
 namespace Proyecto_Taller_Nadia_Santiago
 {

@@ -1,4 +1,6 @@
-﻿using CapaPresentacion.Administrador;
+﻿using Administracion;
+using CapaPresentacion;
+using CapaPresentacion.Vendedor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Pantalla_Inicio
+namespace inicio
 {
     public partial class frmInicio : Form
     {
@@ -18,31 +20,36 @@ namespace CapaPresentacion.Pantalla_Inicio
             InitializeComponent();
         }
 
+        private void btnSupervisor_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("en proceso");
+            /*
+            var frmSupervisor = new frm();
+            frmSupervisor.Show();
+            this.Hide();
+            frmSupervisor.FormClosed += (s, args) => this.Show();
+            */
+        }
+
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            var adminForm = new frmVistaAdmin();
-            adminForm.Show();
+            var vistaAdmin = new frmVistaAdmin();
+            vistaAdmin.Show();
             this.Hide();
-            adminForm.FormClosed += (s, args) => this.Show();
+            vistaAdmin.FormClosed += (s, args) => this.Show();
+        }
 
+        private void btnVendedor_Click(object sender, EventArgs e)
+        {
+            var frmVendedor = new frmVendedor();
+            frmVendedor.Show();
+            this.Hide();
+            frmVendedor.FormClosed += (s, args) => this.Show();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnVendedor_Click_1(object sender, EventArgs e)
-        {
-            var vendedorForm = new Vendedor.frmVendedor();
-            vendedorForm.Show();
-            this.Hide();
-            vendedorForm.FormClosed += (s, args) => this.Show();
-        }
-
-        private void btnEncargado_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

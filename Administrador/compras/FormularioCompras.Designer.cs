@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             textBox1 = new TextBox();
             comboBox2 = new ComboBox();
             labelBuscarPor = new Label();
@@ -59,7 +59,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(1020, 144);
+            textBox1.Location = new Point(820, 149);
             textBox1.Margin = new Padding(4, 3, 4, 3);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(177, 23);
@@ -68,7 +68,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(870, 144);
+            comboBox2.Location = new Point(664, 149);
             comboBox2.Margin = new Padding(4, 3, 4, 3);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(140, 23);
@@ -80,7 +80,7 @@
             labelBuscarPor.BackColor = Color.White;
             labelBuscarPor.Font = new Font("Franklin Gothic Medium", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelBuscarPor.ForeColor = SystemColors.ActiveCaptionText;
-            labelBuscarPor.Location = new Point(791, 147);
+            labelBuscarPor.Location = new Point(594, 152);
             labelBuscarPor.Margin = new Padding(4, 0, 4, 0);
             labelBuscarPor.Name = "labelBuscarPor";
             labelBuscarPor.Size = new Size(62, 15);
@@ -89,20 +89,20 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.MenuText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.MenuText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaRegistro, tipoDoc, NroDocumento, montoTotal, usuarioRegistro, docProveedor, codigoProducto, nombreProducto, categoria, precioCompra });
             dataGridView1.Location = new Point(31, 195);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1210, 310);
+            dataGridView1.Size = new Size(1043, 310);
             dataGridView1.TabIndex = 26;
             // 
             // fechaRegistro
@@ -271,7 +271,7 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 18;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(1204, 141);
+            iconButton2.Location = new Point(1017, 145);
             iconButton2.Margin = new Padding(4, 3, 4, 3);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(37, 28);
@@ -309,7 +309,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1264, 519);
+            ClientSize = new Size(1110, 519);
             Controls.Add(iconButton2);
             Controls.Add(iconButton1);
             Controls.Add(textBox1);
@@ -327,6 +327,7 @@
             Controls.Add(label1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmCompras";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
