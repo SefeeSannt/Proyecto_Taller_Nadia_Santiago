@@ -259,35 +259,35 @@
             // 
             textBox1.Location = new Point(12, 306);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(231, 23);
+            textBox1.Size = new Size(279, 23);
             textBox1.TabIndex = 34;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(12, 218);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(231, 23);
+            textBox2.Size = new Size(279, 23);
             textBox2.TabIndex = 35;
             // 
             // textBox3
             // 
             textBox3.Location = new Point(12, 262);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(231, 23);
+            textBox3.Size = new Size(279, 23);
             textBox3.TabIndex = 36;
             // 
             // textBox4
             // 
             textBox4.Location = new Point(12, 174);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(231, 23);
+            textBox4.Size = new Size(279, 23);
             textBox4.TabIndex = 37;
             // 
             // textBox5
             // 
             textBox5.Location = new Point(13, 83);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(231, 23);
+            textBox5.Size = new Size(279, 23);
             textBox5.TabIndex = 38;
             // 
             // comboBox1
@@ -295,7 +295,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(12, 127);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(231, 23);
+            comboBox1.Size = new Size(279, 23);
             comboBox1.TabIndex = 39;
             // 
             // btnCanecelar

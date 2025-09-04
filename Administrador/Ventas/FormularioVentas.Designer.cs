@@ -78,7 +78,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Black;
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(iconButton2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(comboBox2);
@@ -201,7 +201,7 @@
             dataGridView1.Location = new Point(0, 195);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1210, 310);
+            dataGridView1.Size = new Size(1047, 310);
             dataGridView1.TabIndex = 12;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -356,12 +356,12 @@
             // 
             // label1
             // 
-            label1.BackColor = Color.White;
+            label1.BackColor = Color.FromArgb(224, 224, 224);
             label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(-30, 10);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1289, 93);
+            label1.Size = new Size(1257, 93);
             label1.TabIndex = 1;
             label1.Click += label1_Click;
             // 
