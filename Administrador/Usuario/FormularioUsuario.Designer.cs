@@ -88,7 +88,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Black;
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(label11);
             panel1.Controls.Add(txtId);
             panel1.Controls.Add(label10);
@@ -126,12 +126,13 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.BackColor = Color.FromArgb(64, 64, 64);
-            label11.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.BackColor = Color.FromArgb(224, 224, 224);
+            label11.Font = new Font("Tahoma", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.Black;
             label11.Location = new Point(14, 25);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(141, 25);
+            label11.Size = new Size(145, 24);
             label11.TabIndex = 23;
             label11.Text = "Detalle usuario";
             // 
@@ -146,7 +147,7 @@
             // 
             // label10
             // 
-            label10.BackColor = Color.DarkCyan;
+            label10.BackColor = Color.FromArgb(255, 128, 0);
             label10.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.Location = new Point(314, 10);
             label10.Margin = new Padding(4, 0, 4, 0);
@@ -159,7 +160,7 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.BackgroundColor = SystemColors.ActiveCaptionText;
+            dataGridView1.BackgroundColor = Color.White;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
             dataGridViewCellStyle3.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -300,7 +301,7 @@
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderColor = Color.FromArgb(64, 0, 0);
             btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Sass;
+            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
             btnGuardar.IconColor = Color.Black;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnGuardar.IconSize = 16;
@@ -318,24 +319,29 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(64, 64, 64);
+            label9.BackColor = Color.FromArgb(224, 224, 224);
+            label9.Font = new Font("Tahoma", 10F);
+            label9.ForeColor = Color.Black;
             label9.Location = new Point(14, 418);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(45, 15);
+            label9.Size = new Size(55, 17);
             label9.TabIndex = 16;
             label9.Text = "Estado:";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.BackColor = Color.FromArgb(64, 64, 64);
-            label8.Location = new Point(10, 372);
+            label8.BackColor = Color.FromArgb(224, 224, 224);
+            label8.Font = new Font("Tahoma", 10F);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(16, 370);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(27, 15);
+            label8.Size = new Size(32, 17);
             label8.TabIndex = 15;
             label8.Text = "Rol:";
+            label8.Click += label8_Click;
             // 
             // cboEstado
             // 
@@ -371,11 +377,13 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.FromArgb(64, 64, 64);
+            label7.BackColor = Color.FromArgb(224, 224, 224);
+            label7.Font = new Font("Tahoma", 10F);
+            label7.ForeColor = Color.Black;
             label7.Location = new Point(12, 321);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(125, 15);
+            label7.Size = new Size(145, 17);
             label7.TabIndex = 11;
             label7.Text = "Confirmar contraseña:";
             label7.Click += label7_Click;
@@ -391,11 +399,13 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(64, 64, 64);
+            label6.BackColor = Color.FromArgb(224, 224, 224);
+            label6.Font = new Font("Tahoma", 10F);
+            label6.ForeColor = Color.Black;
             label6.Location = new Point(12, 270);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(70, 15);
+            label6.Size = new Size(83, 17);
             label6.TabIndex = 9;
             label6.Text = "Contraseña:";
             // 
@@ -434,51 +444,59 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(64, 64, 64);
+            label5.BackColor = Color.FromArgb(224, 224, 224);
+            label5.Font = new Font("Tahoma", 10F);
+            label5.ForeColor = Color.Black;
             label5.Location = new Point(12, 224);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(56, 15);
+            label5.Size = new Size(65, 17);
             label5.TabIndex = 4;
             label5.Text = "Telefono:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(64, 64, 64);
+            label4.BackColor = Color.FromArgb(224, 224, 224);
+            label4.Font = new Font("Tahoma", 10F);
+            label4.ForeColor = Color.Black;
             label4.Location = new Point(12, 179);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(46, 15);
+            label4.Size = new Size(55, 17);
             label4.TabIndex = 3;
             label4.Text = "Correo:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(64, 64, 64);
+            label3.BackColor = Color.FromArgb(224, 224, 224);
+            label3.Font = new Font("Tahoma", 10F);
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(12, 134);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(108, 15);
+            label3.Size = new Size(123, 17);
             label3.TabIndex = 2;
             label3.Text = "Nombre completo:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(64, 64, 64);
+            label2.BackColor = Color.FromArgb(224, 224, 224);
+            label2.Font = new Font("Tahoma", 10F);
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(12, 88);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(102, 15);
+            label2.Size = new Size(120, 17);
             label2.TabIndex = 1;
             label2.Text = "Nro. Documento: ";
             label2.Click += label2_Click;
             // 
             // label1
             // 
-            label1.BackColor = Color.FromArgb(64, 64, 64);
+            label1.BackColor = Color.FromArgb(224, 224, 224);
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Dock = DockStyle.Left;
             label1.Location = new Point(0, 0);

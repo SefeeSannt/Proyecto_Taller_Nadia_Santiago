@@ -33,35 +33,31 @@
             btnSupervisor = new FontAwesome.Sharp.IconButton();
             btnAdmin = new FontAwesome.Sharp.IconButton();
             btnVendedor = new FontAwesome.Sharp.IconButton();
-            iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             pnlFondo = new Panel();
             btnSalir = new Button();
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             pnlFondo.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.BackColor = SystemColors.Info;
-            lblTitulo.Font = new Font("Microsoft YaHei Light", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTitulo.BackColor = Color.Ivory;
+            lblTitulo.Font = new Font("Microsoft YaHei Light", 35F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTitulo.ForeColor = SystemColors.ButtonShadow;
-            lblTitulo.Image = (Image)resources.GetObject("lblTitulo.Image");
-            lblTitulo.Location = new Point(125, 32);
+            lblTitulo.Location = new Point(61, 24);
             lblTitulo.Margin = new Padding(4, 0, 4, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(197, 35);
+            lblTitulo.Size = new Size(339, 60);
             lblTitulo.TabIndex = 6;
             lblTitulo.Text = "Tienda ZonaFit";
             // 
             // btnSupervisor
             // 
-            btnSupervisor.BackColor = Color.FromArgb(64, 64, 64);
+            btnSupervisor.BackColor = SystemColors.ControlLight;
             btnSupervisor.Cursor = Cursors.Hand;
             btnSupervisor.FlatAppearance.BorderSize = 0;
-            btnSupervisor.FlatStyle = FlatStyle.Flat;
             btnSupervisor.Font = new Font("Bahnschrift SemiBold", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSupervisor.ForeColor = SystemColors.ButtonFace;
+            btnSupervisor.ForeColor = Color.FromArgb(64, 64, 64);
             btnSupervisor.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
             btnSupervisor.IconColor = SystemColors.ScrollBar;
             btnSupervisor.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -70,19 +66,18 @@
             btnSupervisor.Name = "btnSupervisor";
             btnSupervisor.Size = new Size(223, 63);
             btnSupervisor.TabIndex = 5;
-            btnSupervisor.Text = "Supervisor";
+            btnSupervisor.Text = "Encargado Repositor";
             btnSupervisor.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSupervisor.UseVisualStyleBackColor = false;
             btnSupervisor.Click += btnSupervisor_Click;
             // 
             // btnAdmin
             // 
-            btnAdmin.BackColor = Color.FromArgb(64, 64, 64);
+            btnAdmin.BackColor = SystemColors.ControlLight;
             btnAdmin.Cursor = Cursors.Hand;
             btnAdmin.FlatAppearance.BorderSize = 0;
-            btnAdmin.FlatStyle = FlatStyle.Flat;
             btnAdmin.Font = new Font("Bahnschrift SemiBold", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAdmin.ForeColor = SystemColors.ButtonFace;
+            btnAdmin.ForeColor = Color.FromArgb(64, 64, 64);
             btnAdmin.IconChar = FontAwesome.Sharp.IconChar.UserShield;
             btnAdmin.IconColor = SystemColors.ScrollBar;
             btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -99,12 +94,11 @@
             // 
             // btnVendedor
             // 
-            btnVendedor.BackColor = Color.FromArgb(64, 64, 64);
+            btnVendedor.BackColor = SystemColors.ControlLight;
             btnVendedor.Cursor = Cursors.Hand;
             btnVendedor.FlatAppearance.BorderSize = 0;
-            btnVendedor.FlatStyle = FlatStyle.Flat;
             btnVendedor.Font = new Font("Bahnschrift SemiBold", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnVendedor.ForeColor = SystemColors.ButtonFace;
+            btnVendedor.ForeColor = Color.FromArgb(64, 64, 64);
             btnVendedor.IconChar = FontAwesome.Sharp.IconChar.Handshake;
             btnVendedor.IconColor = SystemColors.ScrollBar;
             btnVendedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -120,22 +114,6 @@
             btnVendedor.UseVisualStyleBackColor = false;
             btnVendedor.Click += btnVendedor_Click;
             // 
-            // iconPictureBox1
-            // 
-            iconPictureBox1.BackColor = SystemColors.GrayText;
-            iconPictureBox1.BackgroundImage = (Image)resources.GetObject("iconPictureBox1.BackgroundImage");
-            iconPictureBox1.ForeColor = Color.Yellow;
-            iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ShoppingBag;
-            iconPictureBox1.IconColor = Color.Yellow;
-            iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 63;
-            iconPictureBox1.Location = new Point(342, 32);
-            iconPictureBox1.Margin = new Padding(4, 3, 4, 3);
-            iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(64, 63);
-            iconPictureBox1.TabIndex = 7;
-            iconPictureBox1.TabStop = false;
-            // 
             // pnlFondo
             // 
             pnlFondo.BackgroundImage = (Image)resources.GetObject("pnlFondo.BackgroundImage");
@@ -147,6 +125,7 @@
             pnlFondo.Name = "pnlFondo";
             pnlFondo.Size = new Size(478, 378);
             pnlFondo.TabIndex = 8;
+            pnlFondo.Paint += pnlFondo_Paint;
             // 
             // btnSalir
             // 
@@ -166,14 +145,12 @@
             Controls.Add(btnSupervisor);
             Controls.Add(btnAdmin);
             Controls.Add(btnVendedor);
-            Controls.Add(iconPictureBox1);
             Controls.Add(pnlFondo);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmInicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "inicio";
-            ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             pnlFondo.ResumeLayout(false);
             pnlFondo.PerformLayout();
             ResumeLayout(false);
@@ -185,7 +162,6 @@
         private FontAwesome.Sharp.IconButton btnSupervisor;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnAdmin;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel pnlFondo;
         private Button btnSalir;
     }

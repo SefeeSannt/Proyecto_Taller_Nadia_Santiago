@@ -1,5 +1,6 @@
 ﻿using Administracion;
 using CapaPresentacion;
+using CapaPresentacion.Repositor;
 using CapaPresentacion.Vendedor;
 using System;
 using System.Collections.Generic;
@@ -22,13 +23,13 @@ namespace inicio
 
         private void btnSupervisor_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("en proceso");
-            /*
-            var frmSupervisor = new frm();
-            frmSupervisor.Show();
+            //MessageBox.Show("en proceso");
+
+            var vistaRepositor = new frmVistaRepositor();
+            vistaRepositor.Show();
             this.Hide();
-            frmSupervisor.FormClosed += (s, args) => this.Show();
-            */
+            vistaRepositor.FormClosed += (s, args) => this.Show();
+
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -50,6 +51,11 @@ namespace inicio
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pnlFondo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
