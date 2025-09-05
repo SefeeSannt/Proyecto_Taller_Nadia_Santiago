@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             Agregra = new ContextMenuStrip(components);
             nuevoToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
@@ -40,16 +40,11 @@
             iconButton1 = new FontAwesome.Sharp.IconButton();
             dataGridView1 = new DataGridView();
             fechaRegistro = new DataGridViewTextBoxColumn();
-            tipoDoc = new DataGridViewTextBoxColumn();
             NroDocumento = new DataGridViewTextBoxColumn();
             montoTotal = new DataGridViewTextBoxColumn();
             usuarioRegistro = new DataGridViewTextBoxColumn();
             docProveedor = new DataGridViewTextBoxColumn();
-            codigoProducto = new DataGridViewTextBoxColumn();
-            nombreProducto = new DataGridViewTextBoxColumn();
-            categoria = new DataGridViewTextBoxColumn();
-            precioCompra = new DataGridViewTextBoxColumn();
-            label3 = new Label();
+            precioCompra = new DataGridViewButtonColumn();
             comboBox1 = new ComboBox();
             lblProveedor = new Label();
             lblFechaFin = new Label();
@@ -85,7 +80,6 @@
             panel1.Controls.Add(labelBuscarPor);
             panel1.Controls.Add(iconButton1);
             panel1.Controls.Add(dataGridView1);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(lblProveedor);
             panel1.Controls.Add(lblFechaFin);
@@ -99,7 +93,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1220, 519);
+            panel1.Size = new Size(960, 538);
             panel1.TabIndex = 4;
             // 
             // iconButton2
@@ -117,7 +111,7 @@
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 18;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(1172, 140);
+            iconButton2.Location = new Point(662, 138);
             iconButton2.Margin = new Padding(4, 3, 4, 3);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(37, 28);
@@ -129,7 +123,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(988, 144);
+            textBox1.Location = new Point(478, 142);
             textBox1.Margin = new Padding(4, 3, 4, 3);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(177, 23);
@@ -139,7 +133,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(839, 144);
+            comboBox2.Location = new Point(301, 142);
             comboBox2.Margin = new Padding(4, 3, 4, 3);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(140, 23);
@@ -152,7 +146,7 @@
             labelBuscarPor.BackColor = Color.White;
             labelBuscarPor.Font = new Font("Franklin Gothic Medium", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelBuscarPor.ForeColor = SystemColors.ActiveCaptionText;
-            labelBuscarPor.Location = new Point(760, 147);
+            labelBuscarPor.Location = new Point(222, 145);
             labelBuscarPor.Margin = new Padding(4, 0, 4, 0);
             labelBuscarPor.Name = "labelBuscarPor";
             labelBuscarPor.Size = new Size(62, 15);
@@ -188,20 +182,21 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.MenuText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.MenuText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaRegistro, tipoDoc, NroDocumento, montoTotal, usuarioRegistro, docProveedor, codigoProducto, nombreProducto, categoria, precioCompra });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaRegistro, NroDocumento, montoTotal, usuarioRegistro, docProveedor, precioCompra });
             dataGridView1.Location = new Point(0, 195);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1047, 310);
+            dataGridView1.Size = new Size(960, 310);
             dataGridView1.TabIndex = 12;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -209,11 +204,6 @@
             // 
             fechaRegistro.HeaderText = "Fecha Registro";
             fechaRegistro.Name = "fechaRegistro";
-            // 
-            // tipoDoc
-            // 
-            tipoDoc.HeaderText = "Tipo Documento";
-            tipoDoc.Name = "tipoDoc";
             // 
             // NroDocumento
             // 
@@ -227,44 +217,20 @@
             // 
             // usuarioRegistro
             // 
-            usuarioRegistro.HeaderText = "Usuario Registro";
+            usuarioRegistro.HeaderText = "Vendedor";
             usuarioRegistro.Name = "usuarioRegistro";
             // 
             // docProveedor
             // 
-            docProveedor.HeaderText = "Documento Proveedor";
+            docProveedor.HeaderText = "Proveedor";
             docProveedor.Name = "docProveedor";
-            // 
-            // codigoProducto
-            // 
-            codigoProducto.HeaderText = "Código Producto";
-            codigoProducto.Name = "codigoProducto";
-            // 
-            // nombreProducto
-            // 
-            nombreProducto.HeaderText = "Nombre Producto";
-            nombreProducto.Name = "nombreProducto";
-            // 
-            // categoria
-            // 
-            categoria.HeaderText = "Categoria";
-            categoria.Name = "categoria";
             // 
             // precioCompra
             // 
-            precioCompra.HeaderText = "Precio Compra";
+            precioCompra.HeaderText = "Accion";
             precioCompra.Name = "precioCompra";
-            // 
-            // label3
-            // 
-            label3.BackColor = Color.White;
-            label3.ForeColor = SystemColors.ActiveCaptionText;
-            label3.Location = new Point(-34, 118);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(1323, 402);
-            label3.TabIndex = 11;
-            label3.Click += label3_Click;
+            precioCompra.Resizable = DataGridViewTriState.True;
+            precioCompra.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // comboBox1
             // 
@@ -358,10 +324,10 @@
             // 
             label1.BackColor = Color.FromArgb(224, 224, 224);
             label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(-30, 10);
+            label1.Location = new Point(0, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1257, 93);
+            label1.Size = new Size(960, 93);
             label1.TabIndex = 1;
             label1.Click += label1_Click;
             // 
@@ -370,9 +336,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(1220, 519);
+            ClientSize = new Size(960, 538);
             Controls.Add(panel1);
-            IsMdiContainer = true;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmVentas";
             Text = "Ventas";
@@ -399,22 +365,17 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn montoTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn docProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioCompra;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label labelBuscarPor;
         private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.TextBox textBox1;
+        private DataGridViewTextBoxColumn fechaRegistro;
+        private DataGridViewTextBoxColumn NroDocumento;
+        private DataGridViewTextBoxColumn montoTotal;
+        private DataGridViewTextBoxColumn usuarioRegistro;
+        private DataGridViewTextBoxColumn docProveedor;
+        private DataGridViewButtonColumn precioCompra;
     }
 }
 

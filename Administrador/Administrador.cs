@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CapaPresentacion.Administrador;
+using CapaPresentacion.Repositor;
+using compras;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,39 +20,54 @@ namespace Administracion
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void tsmiListarProd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-
+            Form frm = new frmProductos();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void tsmiAltaProd_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAltaProducto();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void tsmiDetalleCompras_Click(object sender, EventArgs e)
+        {
+            Form form = new frmCompras();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void tsmiAltaUsuario_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmUsuario();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void tsmiDetalleVentas_Click(object sender, EventArgs e)
         {
-
+            Form frm = new frmVentas();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
     }
 }

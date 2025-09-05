@@ -29,27 +29,20 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Agregra = new ContextMenuStrip(components);
             nuevoToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
             label11 = new Label();
-            txtId = new TextBox();
             label10 = new Label();
             dataGridView1 = new DataGridView();
-            btnSeleccionar = new DataGridViewButtonColumn();
-            idUsuaruio = new DataGridViewTextBoxColumn();
             documento = new DataGridViewTextBoxColumn();
             nombreCompleto = new DataGridViewTextBoxColumn();
             correo = new DataGridViewTextBoxColumn();
-            clave = new DataGridViewTextBoxColumn();
-            idRol = new DataGridViewTextBoxColumn();
             rol = new DataGridViewTextBoxColumn();
             estado = new DataGridViewTextBoxColumn();
-            estadoValor = new DataGridViewTextBoxColumn();
             btnCanecelar = new FontAwesome.Sharp.IconButton();
-            btnEditar = new FontAwesome.Sharp.IconButton();
             btnGuardar = new FontAwesome.Sharp.IconButton();
             label9 = new Label();
             label8 = new Label();
@@ -90,11 +83,9 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label11);
-            panel1.Controls.Add(txtId);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(dataGridView1);
             panel1.Controls.Add(btnCanecelar);
-            panel1.Controls.Add(btnEditar);
             panel1.Controls.Add(btnGuardar);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
@@ -119,7 +110,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1204, 549);
+            panel1.Size = new Size(944, 549);
             panel1.TabIndex = 4;
             panel1.Paint += panel1_Paint;
             // 
@@ -132,24 +123,15 @@
             label11.Location = new Point(14, 25);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(145, 24);
+            label11.Size = new Size(116, 24);
             label11.TabIndex = 23;
-            label11.Text = "Detalle usuario";
-            // 
-            // txtId
-            // 
-            txtId.Location = new Point(220, 80);
-            txtId.Margin = new Padding(4, 3, 4, 3);
-            txtId.Name = "txtId";
-            txtId.Size = new Size(37, 23);
-            txtId.TabIndex = 22;
-            txtId.Visible = false;
+            label11.Text = "Alta usuario";
             // 
             // label10
             // 
             label10.BackColor = Color.FromArgb(255, 128, 0);
             label10.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(314, 10);
+            label10.Location = new Point(281, 10);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
             label10.Size = new Size(880, 27);
@@ -160,79 +142,50 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.White;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, idUsuaruio, documento, nombreCompleto, correo, clave, idRol, rol, estado, estadoValor });
-            dataGridView1.Location = new Point(312, 42);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { documento, nombreCompleto, correo, rol, estado });
+            dataGridView1.Location = new Point(281, 40);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.RowHeadersWidth = 10;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowTemplate.Height = 28;
-            dataGridView1.Size = new Size(882, 372);
+            dataGridView1.Size = new Size(650, 497);
             dataGridView1.TabIndex = 20;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // btnSeleccionar
-            // 
-            btnSeleccionar.HeaderText = "";
-            btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.ReadOnly = true;
-            btnSeleccionar.Width = 30;
-            // 
-            // idUsuaruio
-            // 
-            idUsuaruio.HeaderText = "ID usuario";
-            idUsuaruio.Name = "idUsuaruio";
-            idUsuaruio.ReadOnly = true;
-            idUsuaruio.Visible = false;
-            // 
             // documento
             // 
-            documento.HeaderText = "Nro Documento";
+            documento.HeaderText = "DNI";
             documento.Name = "documento";
             documento.ReadOnly = true;
-            documento.Width = 150;
             // 
             // nombreCompleto
             // 
-            nombreCompleto.HeaderText = "Nombre completo";
+            nombreCompleto.HeaderText = "Nombre";
             nombreCompleto.Name = "nombreCompleto";
             nombreCompleto.ReadOnly = true;
-            nombreCompleto.Width = 180;
             // 
             // correo
             // 
             correo.HeaderText = "Correo";
             correo.Name = "correo";
             correo.ReadOnly = true;
-            correo.Width = 150;
-            // 
-            // clave
-            // 
-            clave.HeaderText = "Clave";
-            clave.Name = "clave";
-            clave.ReadOnly = true;
-            clave.Visible = false;
-            // 
-            // idRol
-            // 
-            idRol.HeaderText = "ID rol";
-            idRol.Name = "idRol";
-            idRol.ReadOnly = true;
-            idRol.Visible = false;
             // 
             // rol
             // 
@@ -246,13 +199,6 @@
             estado.Name = "estado";
             estado.ReadOnly = true;
             // 
-            // estadoValor
-            // 
-            estadoValor.HeaderText = "Estado valor";
-            estadoValor.Name = "estadoValor";
-            estadoValor.ReadOnly = true;
-            estadoValor.Visible = false;
-            // 
             // btnCanecelar
             // 
             btnCanecelar.BackColor = Color.Red;
@@ -263,37 +209,16 @@
             btnCanecelar.IconColor = Color.Black;
             btnCanecelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCanecelar.IconSize = 16;
-            btnCanecelar.Location = new Point(204, 479);
+            btnCanecelar.Location = new Point(111, 479);
             btnCanecelar.Margin = new Padding(4, 3, 4, 3);
             btnCanecelar.Name = "btnCanecelar";
             btnCanecelar.Size = new Size(88, 27);
             btnCanecelar.TabIndex = 19;
-            btnCanecelar.Text = "Eliminar";
+            btnCanecelar.Text = "Limpiar";
             btnCanecelar.TextAlign = ContentAlignment.MiddleRight;
             btnCanecelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCanecelar.UseVisualStyleBackColor = false;
             btnCanecelar.Click += iconButton3_Click;
-            // 
-            // btnEditar
-            // 
-            btnEditar.BackColor = Color.Blue;
-            btnEditar.Cursor = Cursors.Hand;
-            btnEditar.FlatAppearance.BorderColor = Color.FromArgb(64, 0, 0);
-            btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            btnEditar.IconColor = Color.Black;
-            btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEditar.IconSize = 16;
-            btnEditar.Location = new Point(110, 479);
-            btnEditar.Margin = new Padding(4, 3, 4, 3);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(88, 27);
-            btnEditar.TabIndex = 18;
-            btnEditar.Text = "Editar";
-            btnEditar.TextAlign = ContentAlignment.MiddleRight;
-            btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnEditar.UseVisualStyleBackColor = false;
-            btnEditar.Click += iconButton2_Click;
             // 
             // btnGuardar
             // 
@@ -502,7 +427,7 @@
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(306, 549);
+            label1.Size = new Size(271, 549);
             label1.TabIndex = 0;
             label1.Click += label1_Click;
             // 
@@ -511,11 +436,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(1204, 549);
+            ClientSize = new Size(944, 549);
             Controls.Add(panel1);
-            IsMdiContainer = true;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "frmUsuario";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Usuario";
             Load += FormularioUsuario_Load;
             Agregra.ResumeLayout(false);
@@ -549,22 +475,15 @@
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton btnCanecelar;
-        private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuaruio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idRol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoValor;
         private System.Windows.Forms.Label label11;
+        private DataGridViewTextBoxColumn documento;
+        private DataGridViewTextBoxColumn nombreCompleto;
+        private DataGridViewTextBoxColumn correo;
+        private DataGridViewTextBoxColumn rol;
+        private DataGridViewTextBoxColumn estado;
     }
 }
 

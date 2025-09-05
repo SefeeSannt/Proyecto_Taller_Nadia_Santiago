@@ -30,18 +30,13 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            button3 = new Button();
             label11 = new Label();
             label10 = new Label();
             dataGridView1 = new DataGridView();
-            btnSeleccionar = new DataGridViewButtonColumn();
-            idProducto = new DataGridViewTextBoxColumn();
             nombreProducto = new DataGridViewTextBoxColumn();
             categoria = new DataGridViewTextBoxColumn();
-            descripcion = new DataGridViewTextBoxColumn();
+            colCosto = new DataGridViewTextBoxColumn();
             precioVenta = new DataGridViewTextBoxColumn();
-            costo = new DataGridViewTextBoxColumn();
-            stock = new DataGridViewTextBoxColumn();
             label1 = new Label();
             lblNombreProducto = new Label();
             lblCategoria = new Label();
@@ -56,20 +51,10 @@
             textBox5 = new TextBox();
             comboBox1 = new ComboBox();
             btnCanecelar = new FontAwesome.Sharp.IconButton();
-            btnEditar = new FontAwesome.Sharp.IconButton();
             btnGuardar = new FontAwesome.Sharp.IconButton();
             lblRegistrarProducto = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // button3
-            // 
-            button3.Location = new Point(713, 395);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 7;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -99,6 +84,7 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.White;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
@@ -110,71 +96,43 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { btnSeleccionar, idProducto, nombreProducto, categoria, descripcion, precioVenta, costo, stock });
-            dataGridView1.Location = new Point(314, 55);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nombreProducto, categoria, colCosto, precioVenta });
+            dataGridView1.Location = new Point(314, 39);
             dataGridView1.Margin = new Padding(4, 3, 4, 3);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle2.SelectionBackColor = Color.White;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowTemplate.Height = 28;
-            dataGridView1.Size = new Size(844, 372);
+            dataGridView1.Size = new Size(633, 372);
             dataGridView1.TabIndex = 25;
-            // 
-            // btnSeleccionar
-            // 
-            btnSeleccionar.HeaderText = "";
-            btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.ReadOnly = true;
-            btnSeleccionar.Width = 30;
-            // 
-            // idProducto
-            // 
-            idProducto.HeaderText = "ID producto";
-            idProducto.Name = "idProducto";
-            idProducto.ReadOnly = true;
-            idProducto.Visible = false;
             // 
             // nombreProducto
             // 
             nombreProducto.HeaderText = "Nombre";
             nombreProducto.Name = "nombreProducto";
             nombreProducto.ReadOnly = true;
-            nombreProducto.Width = 150;
             // 
             // categoria
             // 
             categoria.HeaderText = "Categoria";
             categoria.Name = "categoria";
             categoria.ReadOnly = true;
-            categoria.Width = 180;
             // 
-            // descripcion
+            // colCosto
             // 
-            descripcion.HeaderText = "Descripcion";
-            descripcion.Name = "descripcion";
-            descripcion.ReadOnly = true;
-            descripcion.Width = 150;
+            colCosto.HeaderText = "Costo";
+            colCosto.Name = "colCosto";
+            colCosto.ReadOnly = true;
             // 
             // precioVenta
             // 
             precioVenta.HeaderText = "Precio Venta";
             precioVenta.Name = "precioVenta";
             precioVenta.ReadOnly = true;
-            // 
-            // costo
-            // 
-            costo.HeaderText = "Costo";
-            costo.Name = "costo";
-            costo.ReadOnly = true;
-            // 
-            // stock
-            // 
-            stock.HeaderText = "Stock";
-            stock.Name = "stock";
-            stock.ReadOnly = true;
             // 
             // label1
             // 
@@ -309,7 +267,7 @@
             btnCanecelar.IconColor = Color.Black;
             btnCanecelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCanecelar.IconSize = 16;
-            btnCanecelar.Location = new Point(202, 349);
+            btnCanecelar.Location = new Point(110, 349);
             btnCanecelar.Margin = new Padding(4, 3, 4, 3);
             btnCanecelar.Name = "btnCanecelar";
             btnCanecelar.Size = new Size(99, 27);
@@ -318,27 +276,6 @@
             btnCanecelar.TextAlign = ContentAlignment.MiddleRight;
             btnCanecelar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCanecelar.UseVisualStyleBackColor = false;
-            // 
-            // btnEditar
-            // 
-            btnEditar.BackColor = Color.Blue;
-            btnEditar.Cursor = Cursors.Hand;
-            btnEditar.FlatAppearance.BorderColor = Color.FromArgb(64, 0, 0);
-            btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.Font = new Font("Segoe UI", 10F);
-            btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            btnEditar.IconColor = Color.Black;
-            btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEditar.IconSize = 16;
-            btnEditar.Location = new Point(104, 349);
-            btnEditar.Margin = new Padding(4, 3, 4, 3);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(90, 27);
-            btnEditar.TabIndex = 41;
-            btnEditar.Text = "Editar";
-            btnEditar.TextAlign = ContentAlignment.MiddleRight;
-            btnEditar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnGuardar
             // 
@@ -351,7 +288,7 @@
             btnGuardar.IconColor = Color.Black;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnGuardar.IconSize = 16;
-            btnGuardar.Location = new Point(7, 349);
+            btnGuardar.Location = new Point(13, 349);
             btnGuardar.Margin = new Padding(4, 3, 4, 3);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(89, 27);
@@ -376,10 +313,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1160, 427);
+            ClientSize = new Size(960, 427);
             Controls.Add(lblRegistrarProducto);
             Controls.Add(btnCanecelar);
-            Controls.Add(btnEditar);
             Controls.Add(btnGuardar);
             Controls.Add(comboBox1);
             Controls.Add(textBox5);
@@ -396,9 +332,10 @@
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(dataGridView1);
-            Controls.Add(button3);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmAltaProducto";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Alta producto";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -406,7 +343,6 @@
         }
 
         #endregion
-        private Button button3;
         private Label label11;
         private Label label10;
         private DataGridView dataGridView1;
@@ -424,16 +360,11 @@
         private TextBox textBox5;
         private ComboBox comboBox1;
         private FontAwesome.Sharp.IconButton btnCanecelar;
-        private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private Label lblRegistrarProducto;
-        private DataGridViewButtonColumn btnSeleccionar;
-        private DataGridViewTextBoxColumn idProducto;
         private DataGridViewTextBoxColumn nombreProducto;
         private DataGridViewTextBoxColumn categoria;
-        private DataGridViewTextBoxColumn descripcion;
+        private DataGridViewTextBoxColumn colCosto;
         private DataGridViewTextBoxColumn precioVenta;
-        private DataGridViewTextBoxColumn costo;
-        private DataGridViewTextBoxColumn stock;
     }
 }
