@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Label lblTituloListaUsuarios;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Agregra = new ContextMenuStrip(components);
             nuevoToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            label11 = new Label();
-            label10 = new Label();
-            dataGridView1 = new DataGridView();
+            lblTituloAltaUs = new Label();
+            dgvUsuariosAlta = new DataGridView();
             documento = new DataGridViewTextBoxColumn();
             nombreCompleto = new DataGridViewTextBoxColumn();
             correo = new DataGridViewTextBoxColumn();
@@ -60,11 +60,25 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
+            lblAltaUsuario = new Label();
+            lblTituloListaUsuarios = new Label();
             Agregra.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuariosAlta).BeginInit();
             SuspendLayout();
+            // 
+            // lblTituloListaUsuarios
+            // 
+            lblTituloListaUsuarios.BackColor = Color.FromArgb(255, 128, 0);
+            lblTituloListaUsuarios.Dock = DockStyle.Top;
+            lblTituloListaUsuarios.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTituloListaUsuarios.Location = new Point(249, 0);
+            lblTituloListaUsuarios.Margin = new Padding(4, 0, 4, 0);
+            lblTituloListaUsuarios.Name = "lblTituloListaUsuarios";
+            lblTituloListaUsuarios.Size = new Size(712, 49);
+            lblTituloListaUsuarios.TabIndex = 21;
+            lblTituloListaUsuarios.Text = "Lista de Usuarios de Alta";
+            lblTituloListaUsuarios.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // Agregra
             // 
@@ -82,9 +96,9 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(lblTituloAltaUs);
+            panel1.Controls.Add(lblTituloListaUsuarios);
+            panel1.Controls.Add(dgvUsuariosAlta);
             panel1.Controls.Add(btnCanecelar);
             panel1.Controls.Add(btnGuardar);
             panel1.Controls.Add(label9);
@@ -103,47 +117,35 @@
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lblAltaUsuario);
             panel1.Cursor = Cursors.Hand;
-            panel1.Dock = DockStyle.Fill;
             panel1.ForeColor = SystemColors.ButtonFace;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(4, 3, 4, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(944, 549);
+            panel1.Size = new Size(961, 560);
             panel1.TabIndex = 4;
             panel1.Paint += panel1_Paint;
             // 
-            // label11
+            // lblTituloAltaUs
             // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.FromArgb(224, 224, 224);
-            label11.Font = new Font("Tahoma", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.Black;
-            label11.Location = new Point(14, 25);
-            label11.Margin = new Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new Size(116, 24);
-            label11.TabIndex = 23;
-            label11.Text = "Alta usuario";
+            lblTituloAltaUs.AutoSize = true;
+            lblTituloAltaUs.BackColor = Color.White;
+            lblTituloAltaUs.Font = new Font("Tahoma", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTituloAltaUs.ForeColor = Color.Black;
+            lblTituloAltaUs.Location = new Point(14, 25);
+            lblTituloAltaUs.Margin = new Padding(4, 0, 4, 0);
+            lblTituloAltaUs.Name = "lblTituloAltaUs";
+            lblTituloAltaUs.Size = new Size(118, 24);
+            lblTituloAltaUs.TabIndex = 23;
+            lblTituloAltaUs.Text = "Alta Usuario";
             // 
-            // label10
+            // dgvUsuariosAlta
             // 
-            label10.BackColor = Color.FromArgb(255, 128, 0);
-            label10.Font = new Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.Location = new Point(281, 10);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(880, 27);
-            label10.TabIndex = 21;
-            label10.Text = "Lista de Usuarios";
-            label10.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
+            dgvUsuariosAlta.AllowUserToAddRows = false;
+            dgvUsuariosAlta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvUsuariosAlta.BackgroundColor = Color.White;
+            dgvUsuariosAlta.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -152,22 +154,23 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { documento, nombreCompleto, correo, rol, estado });
-            dataGridView1.Location = new Point(281, 40);
-            dataGridView1.Margin = new Padding(4, 3, 4, 3);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 10;
+            dgvUsuariosAlta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvUsuariosAlta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuariosAlta.Columns.AddRange(new DataGridViewColumn[] { documento, nombreCompleto, correo, rol, estado });
+            dgvUsuariosAlta.Dock = DockStyle.Bottom;
+            dgvUsuariosAlta.Location = new Point(249, 54);
+            dgvUsuariosAlta.Margin = new Padding(4, 3, 4, 3);
+            dgvUsuariosAlta.MultiSelect = false;
+            dgvUsuariosAlta.Name = "dgvUsuariosAlta";
+            dgvUsuariosAlta.ReadOnly = true;
+            dgvUsuariosAlta.RowHeadersWidth = 10;
             dataGridViewCellStyle2.SelectionBackColor = Color.White;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.RowTemplate.Height = 28;
-            dataGridView1.Size = new Size(650, 497);
-            dataGridView1.TabIndex = 20;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dgvUsuariosAlta.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvUsuariosAlta.RowTemplate.Height = 28;
+            dgvUsuariosAlta.Size = new Size(712, 506);
+            dgvUsuariosAlta.TabIndex = 20;
+            dgvUsuariosAlta.CellContentClick += dataGridView1_CellContentClick;
             // 
             // documento
             // 
@@ -205,14 +208,14 @@
             btnCanecelar.Cursor = Cursors.Hand;
             btnCanecelar.FlatAppearance.BorderColor = Color.FromArgb(64, 0, 0);
             btnCanecelar.FlatStyle = FlatStyle.Flat;
-            btnCanecelar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            btnCanecelar.IconChar = FontAwesome.Sharp.IconChar.Broom;
             btnCanecelar.IconColor = Color.Black;
             btnCanecelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCanecelar.IconSize = 16;
-            btnCanecelar.Location = new Point(111, 479);
+            btnCanecelar.Location = new Point(14, 486);
             btnCanecelar.Margin = new Padding(4, 3, 4, 3);
             btnCanecelar.Name = "btnCanecelar";
-            btnCanecelar.Size = new Size(88, 27);
+            btnCanecelar.Size = new Size(219, 27);
             btnCanecelar.TabIndex = 19;
             btnCanecelar.Text = "Limpiar";
             btnCanecelar.TextAlign = ContentAlignment.MiddleRight;
@@ -230,10 +233,10 @@
             btnGuardar.IconColor = Color.Black;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnGuardar.IconSize = 16;
-            btnGuardar.Location = new Point(15, 479);
+            btnGuardar.Location = new Point(12, 453);
             btnGuardar.Margin = new Padding(4, 3, 4, 3);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(88, 27);
+            btnGuardar.Size = new Size(221, 27);
             btnGuardar.TabIndex = 17;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
@@ -244,10 +247,10 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.BackColor = Color.FromArgb(224, 224, 224);
+            label9.BackColor = Color.White;
             label9.Font = new Font("Tahoma", 10F);
             label9.ForeColor = Color.Black;
-            label9.Location = new Point(14, 418);
+            label9.Location = new Point(12, 393);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new Size(55, 17);
@@ -257,10 +260,10 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.BackColor = Color.FromArgb(224, 224, 224);
+            label8.BackColor = Color.White;
             label8.Font = new Font("Tahoma", 10F);
             label8.ForeColor = Color.Black;
-            label8.Location = new Point(16, 370);
+            label8.Location = new Point(14, 345);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(32, 17);
@@ -272,10 +275,10 @@
             // 
             cboEstado.DropDownStyle = ComboBoxStyle.DropDownList;
             cboEstado.FormattingEnabled = true;
-            cboEstado.Location = new Point(14, 436);
+            cboEstado.Location = new Point(12, 411);
             cboEstado.Margin = new Padding(4, 3, 4, 3);
             cboEstado.Name = "cboEstado";
-            cboEstado.Size = new Size(243, 23);
+            cboEstado.Size = new Size(221, 23);
             cboEstado.TabIndex = 14;
             cboEstado.SelectedIndexChanged += cboEstado_SelectedIndexChanged;
             // 
@@ -283,29 +286,29 @@
             // 
             cboRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cboRol.FormattingEnabled = true;
-            cboRol.Location = new Point(14, 390);
+            cboRol.Location = new Point(12, 365);
             cboRol.Margin = new Padding(4, 3, 4, 3);
             cboRol.Name = "cboRol";
-            cboRol.Size = new Size(243, 23);
+            cboRol.Size = new Size(221, 23);
             cboRol.TabIndex = 13;
             cboRol.SelectedIndexChanged += cboRol_SelectedIndexChanged;
             // 
             // txtConfirmarClave
             // 
-            txtConfirmarClave.Location = new Point(15, 340);
+            txtConfirmarClave.Location = new Point(13, 315);
             txtConfirmarClave.Margin = new Padding(4, 3, 4, 3);
             txtConfirmarClave.Name = "txtConfirmarClave";
-            txtConfirmarClave.Size = new Size(243, 23);
+            txtConfirmarClave.Size = new Size(221, 23);
             txtConfirmarClave.TabIndex = 12;
             txtConfirmarClave.TextChanged += txtConfirmarClave_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.FromArgb(224, 224, 224);
+            label7.BackColor = Color.White;
             label7.Font = new Font("Tahoma", 10F);
             label7.ForeColor = Color.Black;
-            label7.Location = new Point(12, 321);
+            label7.Location = new Point(10, 296);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(145, 17);
@@ -315,19 +318,19 @@
             // 
             // txtClave
             // 
-            txtClave.Location = new Point(16, 288);
+            txtClave.Location = new Point(14, 263);
             txtClave.Margin = new Padding(4, 3, 4, 3);
             txtClave.Name = "txtClave";
-            txtClave.Size = new Size(242, 23);
+            txtClave.Size = new Size(220, 23);
             txtClave.TabIndex = 10;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = Color.FromArgb(224, 224, 224);
+            label6.BackColor = Color.White;
             label6.Font = new Font("Tahoma", 10F);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(12, 270);
+            label6.Location = new Point(10, 245);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(83, 17);
@@ -336,43 +339,43 @@
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(15, 242);
+            txtTelefono.Location = new Point(13, 217);
             txtTelefono.Margin = new Padding(4, 3, 4, 3);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(242, 23);
+            txtTelefono.Size = new Size(220, 23);
             txtTelefono.TabIndex = 8;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(15, 197);
+            txtCorreo.Location = new Point(13, 172);
             txtCorreo.Margin = new Padding(4, 3, 4, 3);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(242, 23);
+            txtCorreo.Size = new Size(220, 23);
             txtCorreo.TabIndex = 7;
             // 
             // txtNombreC
             // 
-            txtNombreC.Location = new Point(15, 152);
+            txtNombreC.Location = new Point(13, 127);
             txtNombreC.Margin = new Padding(4, 3, 4, 3);
             txtNombreC.Name = "txtNombreC";
-            txtNombreC.Size = new Size(242, 23);
+            txtNombreC.Size = new Size(220, 23);
             txtNombreC.TabIndex = 6;
             // 
             // txtDocumento
             // 
-            txtDocumento.Location = new Point(15, 106);
+            txtDocumento.Location = new Point(13, 81);
             txtDocumento.Margin = new Padding(4, 3, 4, 3);
             txtDocumento.Name = "txtDocumento";
-            txtDocumento.Size = new Size(242, 23);
+            txtDocumento.Size = new Size(220, 23);
             txtDocumento.TabIndex = 5;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(224, 224, 224);
+            label5.BackColor = Color.White;
             label5.Font = new Font("Tahoma", 10F);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(12, 224);
+            label5.Location = new Point(10, 199);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(65, 17);
@@ -382,10 +385,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(224, 224, 224);
+            label4.BackColor = Color.White;
             label4.Font = new Font("Tahoma", 10F);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(12, 179);
+            label4.Location = new Point(10, 154);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(55, 17);
@@ -395,10 +398,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(224, 224, 224);
+            label3.BackColor = Color.White;
             label3.Font = new Font("Tahoma", 10F);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(12, 134);
+            label3.Location = new Point(10, 109);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(123, 17);
@@ -408,10 +411,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(224, 224, 224);
+            label2.BackColor = Color.White;
             label2.Font = new Font("Tahoma", 10F);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(12, 88);
+            label2.Location = new Point(10, 63);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(120, 17);
@@ -419,24 +422,24 @@
             label2.Text = "Nro. Documento: ";
             label2.Click += label2_Click;
             // 
-            // label1
+            // lblAltaUsuario
             // 
-            label1.BackColor = Color.FromArgb(224, 224, 224);
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Dock = DockStyle.Left;
-            label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(271, 549);
-            label1.TabIndex = 0;
-            label1.Click += label1_Click;
+            lblAltaUsuario.BackColor = Color.White;
+            lblAltaUsuario.BorderStyle = BorderStyle.FixedSingle;
+            lblAltaUsuario.Dock = DockStyle.Left;
+            lblAltaUsuario.Location = new Point(0, 0);
+            lblAltaUsuario.Margin = new Padding(4, 0, 4, 0);
+            lblAltaUsuario.Name = "lblAltaUsuario";
+            lblAltaUsuario.Size = new Size(249, 560);
+            lblAltaUsuario.TabIndex = 0;
+            lblAltaUsuario.Click += label1_Click;
             // 
             // frmUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(944, 549);
+            ClientSize = new Size(960, 560);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
@@ -447,7 +450,7 @@
             Agregra.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuariosAlta).EndInit();
             ResumeLayout(false);
 
         }
@@ -457,7 +460,7 @@
         private System.Windows.Forms.ContextMenuStrip Agregra;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAltaUsuario;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -476,14 +479,14 @@
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconButton btnCanecelar;
         private FontAwesome.Sharp.IconButton btnGuardar;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dgvUsuariosAlta;
+        private System.Windows.Forms.Label lblTituloAltaUs;
         private DataGridViewTextBoxColumn documento;
         private DataGridViewTextBoxColumn nombreCompleto;
         private DataGridViewTextBoxColumn correo;
         private DataGridViewTextBoxColumn rol;
         private DataGridViewTextBoxColumn estado;
+        private Label lblTituloListaUsuarios;
     }
 }
 

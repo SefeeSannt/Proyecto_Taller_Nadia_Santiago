@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            textBox1 = new TextBox();
-            comboBox2 = new ComboBox();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            txtBuscarReportes = new TextBox();
+            cboBuscarReporte = new ComboBox();
             labelBuscarPor = new Label();
-            dataGridView1 = new DataGridView();
+            dgvReporteCompras = new DataGridView();
             fechaRegistro = new DataGridViewTextBoxColumn();
             tipoDoc = new DataGridViewTextBoxColumn();
             NroDocumento = new DataGridViewTextBoxColumn();
@@ -44,7 +44,7 @@
             categoria = new DataGridViewTextBoxColumn();
             precioCompra = new DataGridViewTextBoxColumn();
             label3 = new Label();
-            comboBox1 = new ComboBox();
+            cboBuscarProveedor = new ComboBox();
             lblProveedor = new Label();
             lblFechaFin = new Label();
             lblFechaInicio = new Label();
@@ -53,26 +53,26 @@
             dateTimePicker1 = new DateTimePicker();
             label1 = new Label();
             iconButton2 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)dgvReporteCompras).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtBuscarReportes
             // 
-            textBox1.Location = new Point(635, 143);
-            textBox1.Margin = new Padding(4, 3, 4, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(177, 23);
-            textBox1.TabIndex = 29;
+            txtBuscarReportes.Location = new Point(723, 150);
+            txtBuscarReportes.Margin = new Padding(4, 3, 4, 3);
+            txtBuscarReportes.Name = "txtBuscarReportes";
+            txtBuscarReportes.Size = new Size(177, 23);
+            txtBuscarReportes.TabIndex = 29;
             // 
-            // comboBox2
+            // cboBuscarReporte
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(479, 143);
-            comboBox2.Margin = new Padding(4, 3, 4, 3);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(140, 23);
-            comboBox2.TabIndex = 28;
+            cboBuscarReporte.FormattingEnabled = true;
+            cboBuscarReporte.Location = new Point(575, 150);
+            cboBuscarReporte.Margin = new Padding(4, 3, 4, 3);
+            cboBuscarReporte.Name = "cboBuscarReporte";
+            cboBuscarReporte.Size = new Size(140, 23);
+            cboBuscarReporte.TabIndex = 28;
             // 
             // labelBuscarPor
             // 
@@ -80,31 +80,34 @@
             labelBuscarPor.BackColor = Color.White;
             labelBuscarPor.Font = new Font("Franklin Gothic Medium", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelBuscarPor.ForeColor = SystemColors.ActiveCaptionText;
-            labelBuscarPor.Location = new Point(370, 146);
+            labelBuscarPor.Location = new Point(497, 159);
             labelBuscarPor.Margin = new Padding(4, 0, 4, 0);
             labelBuscarPor.Name = "labelBuscarPor";
             labelBuscarPor.Size = new Size(62, 15);
             labelBuscarPor.TabIndex = 27;
             labelBuscarPor.Text = "Búscar por:";
             // 
-            // dataGridView1
+            // dgvReporteCompras
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Franklin Gothic Medium", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.MenuText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { fechaRegistro, tipoDoc, NroDocumento, montoTotal, usuarioRegistro, docProveedor, codigoProducto, nombreProducto, categoria, precioCompra });
-            dataGridView1.Location = new Point(13, 197);
-            dataGridView1.Margin = new Padding(4, 3, 4, 3);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(934, 310);
-            dataGridView1.TabIndex = 26;
+            dgvReporteCompras.AllowUserToAddRows = false;
+            dgvReporteCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvReporteCompras.BackgroundColor = Color.White;
+            dgvReporteCompras.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Franklin Gothic Medium", 10F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.MenuText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvReporteCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvReporteCompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvReporteCompras.Columns.AddRange(new DataGridViewColumn[] { fechaRegistro, tipoDoc, NroDocumento, montoTotal, usuarioRegistro, docProveedor, codigoProducto, nombreProducto, categoria, precioCompra });
+            dgvReporteCompras.Location = new Point(13, 197);
+            dgvReporteCompras.Margin = new Padding(4, 3, 4, 3);
+            dgvReporteCompras.Name = "dgvReporteCompras";
+            dgvReporteCompras.Size = new Size(934, 310);
+            dgvReporteCompras.TabIndex = 26;
             // 
             // fechaRegistro
             // 
@@ -166,14 +169,14 @@
             label3.Size = new Size(960, 402);
             label3.TabIndex = 25;
             // 
-            // comboBox1
+            // cboBuscarProveedor
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(562, 65);
-            comboBox1.Margin = new Padding(4, 3, 4, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(250, 23);
-            comboBox1.TabIndex = 24;
+            cboBuscarProveedor.FormattingEnabled = true;
+            cboBuscarProveedor.Location = new Point(562, 65);
+            cboBuscarProveedor.Margin = new Padding(4, 3, 4, 3);
+            cboBuscarProveedor.Name = "cboBuscarProveedor";
+            cboBuscarProveedor.Size = new Size(250, 23);
+            cboBuscarProveedor.TabIndex = 24;
             // 
             // lblProveedor
             // 
@@ -230,7 +233,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(46, 25);
+            label2.Location = new Point(35, 24);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(185, 24);
@@ -265,46 +268,44 @@
             iconButton2.FlatAppearance.BorderSize = 0;
             iconButton2.FlatAppearance.MouseDownBackColor = Color.White;
             iconButton2.FlatAppearance.MouseOverBackColor = Color.White;
-            iconButton2.FlatStyle = FlatStyle.Popup;
             iconButton2.ForeColor = SystemColors.ActiveCaptionText;
             iconButton2.IconChar = FontAwesome.Sharp.IconChar.Search;
             iconButton2.IconColor = Color.Black;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 18;
             iconButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton2.Location = new Point(832, 139);
+            iconButton2.Location = new Point(908, 150);
             iconButton2.Margin = new Padding(4, 3, 4, 3);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(37, 28);
+            iconButton2.Size = new Size(37, 24);
             iconButton2.TabIndex = 31;
             iconButton2.TextAlign = ContentAlignment.MiddleRight;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = false;
             // 
-            // iconButton1
+            // btnBuscarProveedor
             // 
-            iconButton1.AccessibleRole = AccessibleRole.None;
-            iconButton1.BackColor = Color.White;
-            iconButton1.FlatAppearance.BorderColor = Color.White;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatAppearance.MouseDownBackColor = Color.White;
-            iconButton1.FlatAppearance.MouseOverBackColor = Color.White;
-            iconButton1.FlatStyle = FlatStyle.Popup;
-            iconButton1.ForeColor = SystemColors.ActiveCaptionText;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 18;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(820, 63);
-            iconButton1.Margin = new Padding(4, 3, 4, 3);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(92, 25);
-            iconButton1.TabIndex = 30;
-            iconButton1.Text = "Buscar";
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
+            btnBuscarProveedor.AccessibleRole = AccessibleRole.None;
+            btnBuscarProveedor.BackColor = Color.White;
+            btnBuscarProveedor.FlatAppearance.BorderColor = Color.White;
+            btnBuscarProveedor.FlatAppearance.BorderSize = 0;
+            btnBuscarProveedor.FlatAppearance.MouseDownBackColor = Color.White;
+            btnBuscarProveedor.FlatAppearance.MouseOverBackColor = Color.White;
+            btnBuscarProveedor.ForeColor = SystemColors.ActiveCaptionText;
+            btnBuscarProveedor.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btnBuscarProveedor.IconColor = Color.Black;
+            btnBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBuscarProveedor.IconSize = 18;
+            btnBuscarProveedor.ImageAlign = ContentAlignment.MiddleLeft;
+            btnBuscarProveedor.Location = new Point(820, 63);
+            btnBuscarProveedor.Margin = new Padding(4, 3, 4, 3);
+            btnBuscarProveedor.Name = "btnBuscarProveedor";
+            btnBuscarProveedor.Size = new Size(92, 25);
+            btnBuscarProveedor.TabIndex = 30;
+            btnBuscarProveedor.Text = "Buscar";
+            btnBuscarProveedor.TextAlign = ContentAlignment.MiddleRight;
+            btnBuscarProveedor.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnBuscarProveedor.UseVisualStyleBackColor = false;
             // 
             // frmCompras
             // 
@@ -312,13 +313,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(960, 519);
             Controls.Add(iconButton2);
-            Controls.Add(iconButton1);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox2);
+            Controls.Add(btnBuscarProveedor);
+            Controls.Add(txtBuscarReportes);
+            Controls.Add(cboBuscarReporte);
             Controls.Add(labelBuscarPor);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvReporteCompras);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
+            Controls.Add(cboBuscarProveedor);
             Controls.Add(lblProveedor);
             Controls.Add(lblFechaFin);
             Controls.Add(lblFechaInicio);
@@ -331,7 +332,7 @@
             Name = "frmCompras";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Formulario Compras";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvReporteCompras).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -339,10 +340,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtBuscarReportes;
+        private System.Windows.Forms.ComboBox cboBuscarReporte;
         private System.Windows.Forms.Label labelBuscarPor;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvReporteCompras;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoDoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroDocumento;
@@ -354,7 +355,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioCompra;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboBuscarProveedor;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Label lblFechaInicio;
@@ -363,7 +364,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnBuscarProveedor;
     }
 }
 

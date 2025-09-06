@@ -31,29 +31,29 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label11 = new Label();
-            label10 = new Label();
-            dataGridView1 = new DataGridView();
+            lblTituloListaProd = new Label();
+            dgvRegistrarProducto = new DataGridView();
             nombreProducto = new DataGridViewTextBoxColumn();
             categoria = new DataGridViewTextBoxColumn();
             colCosto = new DataGridViewTextBoxColumn();
             precioVenta = new DataGridViewTextBoxColumn();
-            label1 = new Label();
+            lblRegistroProducto = new Label();
             lblNombreProducto = new Label();
             lblCategoria = new Label();
             lblDescripcion = new Label();
             lblPrecioVenta = new Label();
             lblCosto = new Label();
             lblStock = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtStockProd = new TextBox();
+            txtPrecioVentaProd = new TextBox();
+            txtCostoProd = new TextBox();
+            txtDecripcionProd = new TextBox();
+            txtNombreProd = new TextBox();
             comboBox1 = new ComboBox();
             btnCanecelar = new FontAwesome.Sharp.IconButton();
             btnGuardar = new FontAwesome.Sharp.IconButton();
             lblRegistrarProducto = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRegistrarProducto).BeginInit();
             SuspendLayout();
             // 
             // label11
@@ -68,24 +68,24 @@
             label11.TabIndex = 27;
             label11.Text = "Detalle usuario";
             // 
-            // label10
+            // lblTituloListaProd
             // 
-            label10.BackColor = Color.FromArgb(255, 128, 0);
-            label10.Font = new Font("Tahoma", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.White;
-            label10.Location = new Point(314, 9);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(844, 27);
-            label10.TabIndex = 26;
-            label10.Text = "Lista de Productos";
-            label10.TextAlign = ContentAlignment.MiddleLeft;
+            lblTituloListaProd.BackColor = Color.FromArgb(255, 128, 0);
+            lblTituloListaProd.Font = new Font("Tahoma", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTituloListaProd.ForeColor = Color.White;
+            lblTituloListaProd.Location = new Point(249, 0);
+            lblTituloListaProd.Margin = new Padding(4, 0, 4, 0);
+            lblTituloListaProd.Name = "lblTituloListaProd";
+            lblTituloListaProd.Size = new Size(711, 49);
+            lblTituloListaProd.TabIndex = 26;
+            lblTituloListaProd.Text = "Lista de Productos";
+            lblTituloListaProd.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // dataGridView1
+            // dgvRegistrarProducto
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.White;
+            dgvRegistrarProducto.AllowUserToAddRows = false;
+            dgvRegistrarProducto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRegistrarProducto.BackgroundColor = Color.White;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -94,21 +94,21 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nombreProducto, categoria, colCosto, precioVenta });
-            dataGridView1.Location = new Point(314, 39);
-            dataGridView1.Margin = new Padding(4, 3, 4, 3);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dgvRegistrarProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvRegistrarProducto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRegistrarProducto.Columns.AddRange(new DataGridViewColumn[] { nombreProducto, categoria, colCosto, precioVenta });
+            dgvRegistrarProducto.Location = new Point(249, 52);
+            dgvRegistrarProducto.Margin = new Padding(4, 3, 4, 3);
+            dgvRegistrarProducto.MultiSelect = false;
+            dgvRegistrarProducto.Name = "dgvRegistrarProducto";
+            dgvRegistrarProducto.ReadOnly = true;
+            dgvRegistrarProducto.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle2.SelectionBackColor = Color.White;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.RowTemplate.Height = 28;
-            dataGridView1.Size = new Size(633, 372);
-            dataGridView1.TabIndex = 25;
+            dgvRegistrarProducto.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvRegistrarProducto.RowTemplate.Height = 28;
+            dgvRegistrarProducto.Size = new Size(711, 508);
+            dgvRegistrarProducto.TabIndex = 25;
             // 
             // nombreProducto
             // 
@@ -134,18 +134,18 @@
             precioVenta.Name = "precioVenta";
             precioVenta.ReadOnly = true;
             // 
-            // label1
+            // lblRegistroProducto
             // 
-            label1.BackColor = Color.White;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Dock = DockStyle.Left;
-            label1.ForeColor = Color.FromArgb(224, 224, 224);
-            label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(306, 427);
-            label1.TabIndex = 24;
-            label1.Click += label1_Click;
+            lblRegistroProducto.BackColor = Color.White;
+            lblRegistroProducto.BorderStyle = BorderStyle.FixedSingle;
+            lblRegistroProducto.Dock = DockStyle.Left;
+            lblRegistroProducto.ForeColor = Color.FromArgb(224, 224, 224);
+            lblRegistroProducto.Location = new Point(0, 0);
+            lblRegistroProducto.Margin = new Padding(4, 0, 4, 0);
+            lblRegistroProducto.Name = "lblRegistroProducto";
+            lblRegistroProducto.Size = new Size(249, 560);
+            lblRegistroProducto.TabIndex = 24;
+            lblRegistroProducto.Click += label1_Click;
             // 
             // lblNombreProducto
             // 
@@ -213,47 +213,47 @@
             lblStock.TabIndex = 33;
             lblStock.Text = "Stock";
             // 
-            // textBox1
+            // txtStockProd
             // 
-            textBox1.Location = new Point(12, 306);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(279, 23);
-            textBox1.TabIndex = 34;
+            txtStockProd.Location = new Point(12, 306);
+            txtStockProd.Name = "txtStockProd";
+            txtStockProd.Size = new Size(221, 23);
+            txtStockProd.TabIndex = 34;
             // 
-            // textBox2
+            // txtPrecioVentaProd
             // 
-            textBox2.Location = new Point(12, 218);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(279, 23);
-            textBox2.TabIndex = 35;
+            txtPrecioVentaProd.Location = new Point(12, 218);
+            txtPrecioVentaProd.Name = "txtPrecioVentaProd";
+            txtPrecioVentaProd.Size = new Size(221, 23);
+            txtPrecioVentaProd.TabIndex = 35;
             // 
-            // textBox3
+            // txtCostoProd
             // 
-            textBox3.Location = new Point(12, 262);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(279, 23);
-            textBox3.TabIndex = 36;
+            txtCostoProd.Location = new Point(12, 262);
+            txtCostoProd.Name = "txtCostoProd";
+            txtCostoProd.Size = new Size(221, 23);
+            txtCostoProd.TabIndex = 36;
             // 
-            // textBox4
+            // txtDecripcionProd
             // 
-            textBox4.Location = new Point(12, 174);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(279, 23);
-            textBox4.TabIndex = 37;
+            txtDecripcionProd.Location = new Point(12, 174);
+            txtDecripcionProd.Name = "txtDecripcionProd";
+            txtDecripcionProd.Size = new Size(221, 23);
+            txtDecripcionProd.TabIndex = 37;
             // 
-            // textBox5
+            // txtNombreProd
             // 
-            textBox5.Location = new Point(13, 83);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(279, 23);
-            textBox5.TabIndex = 38;
+            txtNombreProd.Location = new Point(13, 83);
+            txtNombreProd.Name = "txtNombreProd";
+            txtNombreProd.Size = new Size(220, 23);
+            txtNombreProd.TabIndex = 38;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(12, 127);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(279, 23);
+            comboBox1.Size = new Size(221, 23);
             comboBox1.TabIndex = 39;
             // 
             // btnCanecelar
@@ -267,10 +267,10 @@
             btnCanecelar.IconColor = Color.Black;
             btnCanecelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCanecelar.IconSize = 16;
-            btnCanecelar.Location = new Point(110, 349);
+            btnCanecelar.Location = new Point(13, 428);
             btnCanecelar.Margin = new Padding(4, 3, 4, 3);
             btnCanecelar.Name = "btnCanecelar";
-            btnCanecelar.Size = new Size(99, 27);
+            btnCanecelar.Size = new Size(220, 27);
             btnCanecelar.TabIndex = 42;
             btnCanecelar.Text = "Eliminar";
             btnCanecelar.TextAlign = ContentAlignment.MiddleRight;
@@ -288,10 +288,10 @@
             btnGuardar.IconColor = Color.Black;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnGuardar.IconSize = 16;
-            btnGuardar.Location = new Point(13, 349);
+            btnGuardar.Location = new Point(13, 461);
             btnGuardar.Margin = new Padding(4, 3, 4, 3);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(89, 27);
+            btnGuardar.Size = new Size(220, 27);
             btnGuardar.TabIndex = 40;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextAlign = ContentAlignment.MiddleRight;
@@ -313,16 +313,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(960, 427);
+            ClientSize = new Size(960, 560);
             Controls.Add(lblRegistrarProducto);
             Controls.Add(btnCanecelar);
             Controls.Add(btnGuardar);
             Controls.Add(comboBox1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtNombreProd);
+            Controls.Add(txtDecripcionProd);
+            Controls.Add(txtCostoProd);
+            Controls.Add(txtPrecioVentaProd);
+            Controls.Add(txtStockProd);
             Controls.Add(lblStock);
             Controls.Add(lblCosto);
             Controls.Add(lblPrecioVenta);
@@ -330,34 +330,34 @@
             Controls.Add(lblCategoria);
             Controls.Add(lblNombreProducto);
             Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(dataGridView1);
-            Controls.Add(label1);
+            Controls.Add(lblTituloListaProd);
+            Controls.Add(dgvRegistrarProducto);
+            Controls.Add(lblRegistroProducto);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAltaProducto";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Alta producto";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvRegistrarProducto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label label11;
-        private Label label10;
-        private DataGridView dataGridView1;
-        private Label label1;
+        private Label lblTituloListaProd;
+        private DataGridView dgvRegistrarProducto;
+        private Label lblRegistroProducto;
         private Label lblNombreProducto;
         private Label lblCategoria;
         private Label lblDescripcion;
         private Label lblPrecioVenta;
         private Label lblCosto;
         private Label lblStock;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtStockProd;
+        private TextBox txtPrecioVentaProd;
+        private TextBox txtCostoProd;
+        private TextBox txtDecripcionProd;
+        private TextBox txtNombreProd;
         private ComboBox comboBox1;
         private FontAwesome.Sharp.IconButton btnCanecelar;
         private FontAwesome.Sharp.IconButton btnGuardar;

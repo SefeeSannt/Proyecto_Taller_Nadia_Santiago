@@ -48,14 +48,9 @@ namespace inicio
             frmVendedor.FormClosed += (s, args) => this.Show();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void pnlFondo_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

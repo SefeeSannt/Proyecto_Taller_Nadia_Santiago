@@ -42,7 +42,7 @@
             tsmiAltaProd = new ToolStripMenuItem();
             iconMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
             tsmiAltaUsuario = new ToolStripMenuItem();
-            bajaDeUsuarioToolStripMenuItem = new ToolStripMenuItem();
+            tsmiListarUsuarios = new ToolStripMenuItem();
             iconMenuItem3 = new FontAwesome.Sharp.IconMenuItem();
             tsmiDetalleVentas = new ToolStripMenuItem();
             tsmiDetalleCompras = new ToolStripMenuItem();
@@ -83,6 +83,7 @@
             // 
             lblNombreRegistro.AutoSize = true;
             lblNombreRegistro.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNombreRegistro.ForeColor = Color.White;
             lblNombreRegistro.Location = new Point(818, 24);
             lblNombreRegistro.Margin = new Padding(4, 0, 4, 0);
             lblNombreRegistro.Name = "lblNombreRegistro";
@@ -94,6 +95,7 @@
             // 
             lblTituloAdm.AutoSize = true;
             lblTituloAdm.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTituloAdm.ForeColor = Color.White;
             lblTituloAdm.Location = new Point(711, 24);
             lblTituloAdm.Margin = new Padding(4, 0, 4, 0);
             lblTituloAdm.Name = "lblTituloAdm";
@@ -105,6 +107,7 @@
             // 
             lblTitulo.AutoSize = true;
             lblTitulo.Font = new Font("Ink Free", 17F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(14, 24);
             lblTitulo.Margin = new Padding(4, 0, 4, 0);
             lblTitulo.Name = "lblTitulo";
@@ -173,7 +176,7 @@
             // 
             // iconMenuItem2
             // 
-            iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { tsmiAltaUsuario, bajaDeUsuarioToolStripMenuItem });
+            iconMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { tsmiAltaUsuario, tsmiListarUsuarios });
             iconMenuItem2.Font = new Font("Segoe UI Variable Text Semibold", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             iconMenuItem2.ForeColor = Color.White;
             iconMenuItem2.IconChar = FontAwesome.Sharp.IconChar.User;
@@ -192,11 +195,12 @@
             tsmiAltaUsuario.Text = "Dar de alta";
             tsmiAltaUsuario.Click += tsmiAltaUsuario_Click;
             // 
-            // bajaDeUsuarioToolStripMenuItem
+            // tsmiListarUsuarios
             // 
-            bajaDeUsuarioToolStripMenuItem.Name = "bajaDeUsuarioToolStripMenuItem";
-            bajaDeUsuarioToolStripMenuItem.Size = new Size(142, 22);
-            bajaDeUsuarioToolStripMenuItem.Text = "Listar";
+            tsmiListarUsuarios.Name = "tsmiListarUsuarios";
+            tsmiListarUsuarios.Size = new Size(142, 22);
+            tsmiListarUsuarios.Text = "Listar";
+            tsmiListarUsuarios.Click += tsmiListarUsuarios_Click;
             // 
             // iconMenuItem3
             // 
@@ -234,7 +238,7 @@
             // frmVistaAdmin
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BackColor = SystemColors.ControlDark;
+            BackColor = Color.White;
             ClientSize = new Size(960, 660);
             Controls.Add(menuStrip1);
             Controls.Add(pntCabecera);
@@ -244,6 +248,8 @@
             Name = "frmVistaAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administrador";
+            TransparencyKey = Color.White;
+            Load += FormMDI_Load;
             Agregra.ResumeLayout(false);
             pntCabecera.ResumeLayout(false);
             pntCabecera.PerformLayout();
@@ -268,7 +274,7 @@
         private ToolStripMenuItem tsmiAltaProd;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem2;
         private ToolStripMenuItem tsmiAltaUsuario;
-        private ToolStripMenuItem bajaDeUsuarioToolStripMenuItem;
+        private ToolStripMenuItem tsmiListarUsuarios;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem3;
         private ToolStripMenuItem tsmiDetalleVentas;
         private ToolStripMenuItem tsmiDetalleCompras;

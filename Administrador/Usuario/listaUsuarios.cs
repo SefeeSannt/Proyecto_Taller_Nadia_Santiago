@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion.Administrador
+namespace CapaPresentacion.Administrador.Usuario
 {
-    public partial class registroProductos : Form
+    public partial class frmListaUsuarios : Form
     {
-        public registroProductos()
+        public frmListaUsuarios()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -34,7 +34,7 @@
             btnAdmin = new FontAwesome.Sharp.IconButton();
             btnVendedor = new FontAwesome.Sharp.IconButton();
             pnlFondo = new Panel();
-            btnSalir = new Button();
+            btnSalir = new FontAwesome.Sharp.IconButton();
             pnlFondo.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,6 +67,7 @@
             btnSupervisor.Size = new Size(223, 63);
             btnSupervisor.TabIndex = 5;
             btnSupervisor.Text = "Encargado Repositor";
+            btnSupervisor.TextAlign = ContentAlignment.MiddleRight;
             btnSupervisor.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSupervisor.UseVisualStyleBackColor = false;
             btnSupervisor.Click += btnSupervisor_Click;
@@ -81,7 +82,7 @@
             btnAdmin.IconChar = FontAwesome.Sharp.IconChar.UserShield;
             btnAdmin.IconColor = SystemColors.ScrollBar;
             btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnAdmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAdmin.ImageAlign = ContentAlignment.TopCenter;
             btnAdmin.Location = new Point(125, 121);
             btnAdmin.Margin = new Padding(4, 3, 4, 3);
             btnAdmin.Name = "btnAdmin";
@@ -89,6 +90,7 @@
             btnAdmin.TabIndex = 4;
             btnAdmin.Text = "Administrador";
             btnAdmin.TextAlign = ContentAlignment.MiddleRight;
+            btnAdmin.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdmin.UseVisualStyleBackColor = false;
             btnAdmin.Click += btnAdmin_Click;
             // 
@@ -102,7 +104,6 @@
             btnVendedor.IconChar = FontAwesome.Sharp.IconChar.Handshake;
             btnVendedor.IconColor = SystemColors.ScrollBar;
             btnVendedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnVendedor.ImageAlign = ContentAlignment.MiddleLeft;
             btnVendedor.Location = new Point(125, 192);
             btnVendedor.Margin = new Padding(4, 3, 4, 3);
             btnVendedor.Name = "btnVendedor";
@@ -125,17 +126,18 @@
             pnlFondo.Name = "pnlFondo";
             pnlFondo.Size = new Size(478, 378);
             pnlFondo.TabIndex = 8;
-            pnlFondo.Paint += pnlFondo_Paint;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(391, 343);
+            btnSalir.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            btnSalir.IconColor = SystemColors.ScrollBar;
+            btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSalir.Location = new Point(427, 328);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(75, 23);
-            btnSalir.TabIndex = 7;
-            btnSalir.Text = "Salir";
+            btnSalir.Size = new Size(48, 47);
+            btnSalir.TabIndex = 8;
             btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += btnSalir_Click;
+            btnSalir.Click += btnSalir_Click_1;
             // 
             // frmInicio
             // 
@@ -163,7 +165,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnAdmin;
         private System.Windows.Forms.Panel pnlFondo;
-        private Button btnSalir;
+        private FontAwesome.Sharp.IconButton btnSalir;
     }
 }
 

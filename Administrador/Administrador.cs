@@ -1,4 +1,5 @@
 ﻿using CapaPresentacion.Administrador;
+using CapaPresentacion.Administrador.Usuario;
 using CapaPresentacion.Repositor;
 using compras;
 using System;
@@ -68,6 +69,29 @@ namespace Administracion
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
             frm.Show();
+        }
+
+        private void tsmiListarUsuarios_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmListaUsuarios();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
+
+        }
+
+        //Funcion load que añade un color backround en el formulario padre del Administrador
+        private void FormMDI_Load(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is MdiClient mdi)
+                {
+                    // Fondo de color
+                    mdi.BackColor = Color.White;
+
+                }
+            }
         }
     }
 }
